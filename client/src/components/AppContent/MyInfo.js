@@ -11,12 +11,11 @@ import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import red from "@material-ui/core/colors/red";
+import grey from "@material-ui/core/colors/grey";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   card: {
@@ -44,10 +43,11 @@ const styles = theme => ({
   },
   typography: {
     margin: theme.spacing.unit * 2
-  }
+  },
+  color: grey['900']  
 });
 
-class RecipeReviewCard extends React.Component {
+class MyInfoCard extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -58,7 +58,7 @@ class RecipeReviewCard extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
+      <Card className={classes.card} alignContent='stretch'>
         <CardHeader
           avatar={
             <Avatar aria-label="Name" className={classes.avatar}>
@@ -75,16 +75,19 @@ class RecipeReviewCard extends React.Component {
         />
         <CardContent>
           <Typography component="p">
-            FullName
+            My Name
             {/* {{this.state.fullName}} */}
-            <br /> FullName
+            <br /> Email
             {/* {{this.state.fullName}} */}
-            <br /> FullName
+            <br /> Phone Number
             {/* {{this.state.fullName}} */}
-            <br /> FullName
+            <br /> City
             {/* {{this.state.fullName}} */}
             <br />
-            Phone Number etc
+            State
+            {/* {{this.state.fullName}} */}
+            <br />
+            Company
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
@@ -120,8 +123,8 @@ class RecipeReviewCard extends React.Component {
   }
 }
 
-RecipeReviewCard.propTypes = {
+MyInfoCard.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(RecipeReviewCard);
+export default withStyles(styles)(MyInfoCard);

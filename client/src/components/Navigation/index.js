@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
-
+import AppBar from "@material-ui/core/AppBar";
 import { AuthUserContext } from '../Session';
 
 // import all routes defined in constants file

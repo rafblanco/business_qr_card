@@ -2,12 +2,12 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import BottomNavigation from '@material-ui/core/BottomNavigation';
 
-class DisabledTabs extends React.Component {
+class Footer extends React.Component {
   state = {
     value: 2
   };
-
   handleChange = (event, value) => {
     this.setState({ value });
   };
@@ -21,7 +21,7 @@ class DisabledTabs extends React.Component {
           textColor="primary"
           onChange={this.handleChange}
         >
-          <Tab label="Your Info" />
+          <Tab label="My Info" />
           <Tab label="Connections" />
           <Tab label="Generate QR" />
           <Tab label="QR Scanner" />
@@ -31,4 +31,4 @@ class DisabledTabs extends React.Component {
   }
 }
 
-export default DisabledTabs;
+export default Footer;

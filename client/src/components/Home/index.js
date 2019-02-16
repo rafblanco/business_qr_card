@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { withAuthorization } from '../Session';
 import API from '../../utils/API';
-import RecipeReviewCard from "./../AppContent/MyInfo";
+import MyInfoCard from "./../AppContent/MyInfo";
 import Expansion from "./../AppContent/Expansion";
 
 class HomePage extends Component{
@@ -45,8 +45,7 @@ class HomePage extends Component{
 
   render(){
     return <div>
-    <RecipeReviewCard />
-    <Expansion />
+    <MyInfoCard />
     </div>
   }
 };
