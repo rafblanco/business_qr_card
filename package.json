@@ -25,5 +25,9 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.4.12",
     "react-qr-reader": "^2.2.0"
+  },
+  "engines": {
+    "node": "8.11.4",
+    "npm": "5.6.0"
   }
 }
