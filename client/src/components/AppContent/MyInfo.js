@@ -88,6 +88,8 @@ class MyInfoCard extends React.Component {
             <br />
             <strong>State: </strong>{this.props.state}
 
+            <strong>Company: </strong>{this.props.company}
+
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>

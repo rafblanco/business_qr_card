@@ -27,7 +27,7 @@
     "react-qr-reader": "^2.2.0"
   },
   "engines": {
-    "node": "8.11.4",
+    "node": "10.4.0",
     "npm": "5.6.0"
   }
 }
