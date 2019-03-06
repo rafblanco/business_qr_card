@@ -12,7 +12,7 @@ class DeleteBtn extends Component{
     render(){
         return (
         <div>
-            <button onClick={this.deleteConnect()}></button>
+            <button onClick={this.deleteConnect()}>Delete</button>
         </div>
         )
     }
