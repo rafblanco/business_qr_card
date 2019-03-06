@@ -21,8 +21,12 @@ function ImageAvatars(props) {
     <Grid container justify="center" alignItems="center">
       {/* <Avatar alt="Rafael Blanco"
        src={require("../../images/RafaelAvatar.png")} className={classes.bigAvatar} /> */}
-      <Avatar alt="Rafael Blanco"
-        src={require("../../images/mickey.jpg")} className={classes.bigAvatar} />
+      {/* <Avatar alt="Mickey Mouse"
+        src={require("../../images/mickey.jpg")} className={classes.bigAvatar} /> */}
+      {/* <Avatar alt="Sienna Spargo"
+        src={require("../../images/siennaAvatar.jpeg")} className={classes.bigAvatar} /> */}
+      <Avatar alt="Spy Guy Placeholder"
+        src={require("../../images/myplaceholder.png")} className={classes.bigAvatar} />
     </Grid>
   );
 }

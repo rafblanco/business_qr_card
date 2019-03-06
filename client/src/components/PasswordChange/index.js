@@ -47,7 +47,7 @@ class PasswordChangeForm extends Component {
     return (
       <div align='center'>
       <form onSubmit={this.onSubmit}>
-        <TextField
+        <TextField style={{textDecoration: 'none', color: "#ffffff" }}
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
