@@ -34,8 +34,7 @@ class Connections extends Component {
 
   infoAPI = () =>{
       this.state.connections.map(connection => { 
-        console.log(connection.new)
-          return API.getUser({email: connection.new})
+          return API.getUser({email: connection})
             .then(res =>{
               console.log(res)
               this.setState({info: [...this.state.info, res.data[0]]})              

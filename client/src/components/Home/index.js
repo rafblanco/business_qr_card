@@ -35,7 +35,7 @@ class HomePage extends Component{
       .then(res => {
         console.log(res)
         const data = res.data[0]
-        this.setState({user: data.fullName, email: data.email, phoneNumber: data.phoneNumber, industry: data.industry, city: data.city, state: data.state, company: data.company, id: data._id, connections: data.connections})
+        this.setState({user: data.fullName, email: data.email, phoneNumber: data.phoneNumber, industry: data.industry, city: data.city, state: data.state, company: data.company, id: data._id})
       })
       .then(() =>{
         API.getConnections(this.state.id)
