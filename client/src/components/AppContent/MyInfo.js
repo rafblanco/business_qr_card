@@ -71,7 +71,7 @@ class MyInfoCard extends React.Component {
           }
           action={
             <IconButton>
-              <MoreVertIcon />
+              {/* <MoreVertIcon /> */}
             </IconButton>
           }
           title={this.props.user}
@@ -87,9 +87,10 @@ class MyInfoCard extends React.Component {
             <strong>City: </strong>{this.props.city}
             <br />
             <strong>State: </strong>{this.props.state}
-
+            <br />
             <strong>Company: </strong>{this.props.company}
-
+            <br />
+            <strong>Industry: </strong>{this.props.industry}
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>

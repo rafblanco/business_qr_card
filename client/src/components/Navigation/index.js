@@ -26,7 +26,7 @@ const Navigation = () => (
 const NavigationAuth = () => (
   <AppBar>
     <Button>
-      <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.LANDING}>Landing</Link>
+      <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.LANDING}></Link>
     </Button>
 
     <Button>
@@ -36,9 +36,9 @@ const NavigationAuth = () => (
     <Button>
       <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.ACCOUNT}>Account</Link>
     </Button>
-    <Button>
+    {/* <Button>
       <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.ADMIN}>Admin</Link>
-    </Button>
+    </Button> */}
     <Button>
       <SignOutButton />
     </Button>
