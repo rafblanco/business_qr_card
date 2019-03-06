@@ -34,6 +34,7 @@ class Connections extends Component {
 
   infoAPI = () =>{
       this.state.connections.map(connection => { 
+        console.log(connection)
           return API.getUser({email: connection})
             .then(res =>{
               console.log(res)

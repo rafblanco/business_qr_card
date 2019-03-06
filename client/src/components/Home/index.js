@@ -30,10 +30,8 @@ class HomePage extends Component{
   };
 
   loadProfile(email){
-    console.log(email)
       API.getUser({email: email})
       .then(res => {
-        console.log(res)
         const data = res.data[0]
         this.setState({user: data.fullName, email: data.email, phoneNumber: data.phoneNumber, industry: data.industry, city: data.city, state: data.state, company: data.company, id: data._id})
       })
