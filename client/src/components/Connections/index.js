@@ -34,7 +34,7 @@ class Connections extends Component {
   infoAPI = () =>{
       this.state.connections.map(connection => { 
         console.log(connection)
-          return API.getUser({email: connection})
+          return API.getUser({email: connection.new})
             .then(res =>{
               console.log(res)
               this.setState({info: [...this.state.info, res.data[0]]})              
@@ -46,11 +46,12 @@ class Connections extends Component {
   render() {
     return (
       <div>
-        {this.state.info.map(connection => {
+        {this.state.info.map((connection, index) => {
           return (
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className=""> {connection.fullName} </Typography>
+                <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/>
               </ExpansionPanelSummary>
 
               <ExpansionPanelDetails>
