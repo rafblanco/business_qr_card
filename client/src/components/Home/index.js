@@ -40,7 +40,7 @@ class HomePage extends Component{
           .then(res => {
             res.data.connections.map(connection => {
               return this.setState({
-                connections: [...this.state.connections, connection]
+                connections: [...this.state.connections, connection.new]
               })
             })
           }) 
