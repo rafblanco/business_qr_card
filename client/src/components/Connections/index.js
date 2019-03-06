@@ -28,7 +28,6 @@ class Connections extends Component {
     }
   }
   componentDidMount(){
-    
     this.infoAPI()
   };
 
