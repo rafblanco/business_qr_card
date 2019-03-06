@@ -51,8 +51,6 @@ class Connections extends Component {
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className=""> {connection.fullName} </Typography>
-
-                <DeleteBtn />
               </ExpansionPanelSummary>
 
               <ExpansionPanelDetails>
