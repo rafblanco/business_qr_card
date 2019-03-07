@@ -100,7 +100,10 @@ class NavTabs extends React.Component {
 
           {value === 1 && <TabContainer>
 
-            <Connections connections = {this.props.connections}/>
+            <Connections 
+            connections = {this.props.connections}
+            loadProfile = {this.props.loadProfile()}
+            />
           </TabContainer>}
 
 
@@ -116,7 +119,10 @@ class NavTabs extends React.Component {
 
             <h1>Scan QR</h1>
             <br/>
-            <QRscanner id={this.props.id}/>
+            <QRscanner 
+            id={this.props.id}
+            loadProfile = {this.props.loadProfile()}
+                        />
             </div>
 
           </TabContainer>}

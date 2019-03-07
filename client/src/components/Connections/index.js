@@ -33,10 +33,8 @@ class Connections extends Component {
 
   infoAPI = () =>{
       this.state.connections.map(connection => { 
-        console.log(connection)
           return API.getUser({email: connection.new})
             .then(res =>{
-              console.log(res)
               this.setState({info: [...this.state.info, res.data[0]]})              
             })
             .catch(err => console.log(err))
@@ -46,7 +44,7 @@ class Connections extends Component {
     console.log(id)
     API.removeConnection(id)
       .then(res => {
-        console.log(res)
+        this.props.loadProfile()
       })
       .catch(err => console.log(err))
   };
