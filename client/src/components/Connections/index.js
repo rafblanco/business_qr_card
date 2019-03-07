@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+
 import { withStyles } from "@material-ui/core/styles";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -44,7 +44,6 @@ class Connections extends Component {
   };
 
   render() {
-    this.infoAPI()
     return (
       <div>
         {this.state.info.map((connection, index) => {
@@ -52,7 +51,7 @@ class Connections extends Component {
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className=""> {connection.fullName} </Typography>
-                <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/>
+                {/* <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/> */}
               </ExpansionPanelSummary>
 
               <ExpansionPanelDetails>
@@ -63,8 +62,10 @@ class Connections extends Component {
                   <p>City: {connection.city}</p>
                   <p>State: {connection.state}</p>
                   <p>Email: <a href={`mailto:${connection.email}`}>{connection.email}</a></p>
+
+                  <DeleteBtn id={this.state.connections[index]._id}  />
+
                 </Typography>
-                <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           );
