@@ -8,11 +8,7 @@ import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 
 
-const styles = {
-  root: {
-    width: 500,
-  },
-};
+
 
 const Landing = () => (
   <div align='center'>
@@ -58,9 +54,6 @@ const Landing = () => (
     <br />
 
 
-    <img alt="scanMe" src={require('../../images/scanmeQR.png')} />
-    <img alt="scanMe" src={require('../../images/scanmeQR.png')} />
-    <img alt="scanMe" src={require('../../images/scanmeQR.png')} />
     <img alt="scanMe" src={require('../../images/scanmeQR.png')} />
 
     <br />

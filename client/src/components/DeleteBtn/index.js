@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/api"
 
-
+import Button from '@material-ui/core/Button';
 
 class DeleteBtn extends Component{
     deleteConnect = () =>{
@@ -15,7 +15,7 @@ class DeleteBtn extends Component{
     render(){
         return (
         <div>
-            <button onClick={this.deleteConnect()}>Delete</button>
+            <Button onClick={() => this.deleteConnect()}>Delete</Button>
         </div>
         )
     }
