@@ -102,7 +102,6 @@ class NavTabs extends React.Component {
 
             <Connections 
             connections = {this.props.connections}
-            loadProfile = {this.props.loadProfile()}
             />
           </TabContainer>}
 
@@ -121,7 +120,6 @@ class NavTabs extends React.Component {
             <br/>
             <QRscanner 
             id={this.props.id}
-            loadProfile = {this.props.loadProfile()}
                         />
             </div>
 
