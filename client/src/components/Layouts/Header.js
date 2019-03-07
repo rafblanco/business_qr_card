@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import MenuIcon from '@material-ui/core/Menu';
-
-import SwipeableDrawer from '../SwiperDrawer/SwiperDrawer';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 
 
 import * as ROUTES from '../../constants/routes';
 
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+
+// import SwipeableDrawer from '../SwiperDrawer/SwiperDrawer';
+// import Button from '@material-ui/core/Button';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/core/Menu';
 
 
 const styles = {
@@ -55,20 +55,3 @@ ButtonAppBar.propTypes = {
 };
 
 export default withStyles(styles)(ButtonAppBar);
-
-// export default props => (
-//   <AppBar position="static" style={{ background: '#424242' }}>
-//     <Toolbar>
-
-//       <Typography variant="headline" color="inherit" style={{ flex: 1 }}>    <Link style={{ textDecoration: 'none', color: '#ffffff' }} to={ROUTES.LANDING}>
-//         CONNECTIONS      </Link>
-//       </Typography>
-
-// <SwipeableDrawer /><MenuIcon />
-//       <Typography style={{flex: -1
-//       }}>
-//         {props.children}
-//       </Typography>
-//     </Toolbar>
-//   </AppBar>
-// );

@@ -6,30 +6,10 @@ import Tabs from '@material-ui/core/Tabs';
 import NoSsr from '@material-ui/core/NoSsr';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import { createMuiTheme } from '@material-ui/core/styles';
 import MyInfoCard from '../AppContent/MyInfo';
 import QRscanner from '../QRpart/QRscanner';
 import QRcode from '../QRpart/QRcode';
 import Connections from "../Connections/index";
-
-
-// Not working correctly __ using inline styling instead //
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       light: '#7b7b7b',
-//       main: '#5b5b5b',
-//       dark: '#3f3f3f',
-//       contrastText: '#fff',
-//     },
-//     secondary: {
-//       light: '#959595',
-//       main: '#7b7b7b',
-//       dark: '#565656',
-//       contrastText: '#000',
-//     },
-//   },
-// });
 
 function TabContainer(props) {
   return (

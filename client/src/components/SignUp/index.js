@@ -129,7 +129,7 @@ class SignUpFormBase extends Component {
             value={username}
             onChange={this.onChange}
             type="text"
-            placeholder="Full Name"
+            placeholder="J. Cole"
           />
           <p>Email</p>
           <TextField
@@ -137,7 +137,7 @@ class SignUpFormBase extends Component {
             value={email}
             onChange={this.onChange}
             type="text"
-            placeholder="Email Address"
+            placeholder="j.Cole@talentedrappers.com"
           />
           <p>Phone Number</p>
           <TextField
@@ -145,7 +145,7 @@ class SignUpFormBase extends Component {
             value={phoneNumber}
             onChange={this.onChange}
             type="text"
-            placeholder="Phone Number"
+            placeholder="(917) 456-9876"
           />
           <p>Industry</p>
           <TextField
@@ -153,7 +153,7 @@ class SignUpFormBase extends Component {
             value={industry}
             onChange={this.onChange}
             type="text"
-            placeholder="Industry"
+            placeholder="Technology"
           />
           <p>City</p>
           <TextField
@@ -161,7 +161,7 @@ class SignUpFormBase extends Component {
             value={city}
             onChange={this.onChange}
             type="text"
-            placeholder="City"
+            placeholder="New York"
           />
           <p>State</p>
           <TextField
@@ -169,7 +169,7 @@ class SignUpFormBase extends Component {
             value={state}
             onChange={this.onChange}
             type="text"
-            placeholder="State"
+            placeholder="New York"
           />
           <p>Company</p>
           <TextField
@@ -177,15 +177,15 @@ class SignUpFormBase extends Component {
             value={company}
             onChange={this.onChange}
             type="text"
-            placeholder="Company"
+            placeholder="Google"
           />
-          <p>Password > 6</p>
+          <p>Password</p>
           <TextField
             name="passwordOne"
             value={passwordOne}
             onChange={this.onChange}
             type="password"
-            placeholder="Password"
+            placeholder="Must be 6 or more characters"
           />
           <p>Confirm Password</p>
           <TextField
