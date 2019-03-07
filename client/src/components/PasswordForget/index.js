@@ -62,9 +62,9 @@ class PasswordForgetFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
-        {/* <Button style={{ textDecoration: 'none', color: '#64ffda' }} disabled={isInvalid} type="submit">
+        <Button style={{ textDecoration: 'none', color: '#64ffda' }} disabled={isInvalid} type="submit">
           Reset My Password
-        </Button> */}
+        </Button>
 
         {error && <p>{error.message}</p>}
       </form>

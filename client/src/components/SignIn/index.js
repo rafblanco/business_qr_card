@@ -67,7 +67,7 @@ class SignInFormBase extends Component {
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
+          placeholder="email@domain.com"
         />
         <br/>
         <h4 style={{ textDecoration: 'none', color: '#FFFFFF' }}>Password</h4>
