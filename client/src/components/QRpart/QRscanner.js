@@ -32,6 +32,9 @@ class QRscanner extends Component {
       .then(res => {
           this.setState({result : "No result"})
       })
+      .then(
+        this.props.loadProfile()
+      )
       .catch(err => console.log(err))
   }
 
