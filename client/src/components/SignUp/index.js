@@ -137,7 +137,7 @@ class SignUpFormBase extends Component {
             value={email}
             onChange={this.onChange}
             type="text"
-            placeholder="j.Cole@talentedrappers.com"
+            placeholder="j.Cole@rap.com"
           />
           <p>Phone Number</p>
           <TextField
