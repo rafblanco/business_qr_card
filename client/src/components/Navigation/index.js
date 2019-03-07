@@ -48,9 +48,6 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
   <AppBar>
     <Button>
-      <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.LANDING}>Landing</Link>
-    </Button>
-    <Button>
       <Link style={{ textDecoration: 'none', color: '#64ffda' }} to={ROUTES.SIGN_IN}>Sign In</Link>
     </Button>
   </AppBar >
