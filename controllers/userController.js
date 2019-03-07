@@ -43,16 +43,20 @@ module.exports = {
             })
     },
     removeConnection: function(req, res){
-        db.Connection.remove({
-                _id: req.params.id
-            }),
-            function(err, removed){
-                if(err){
-                    console.log(err)
-                } else{
-                    console.log(removed)
-                    res.json(removed)
-                }
-            }
+        // db.Connection.remove({
+        //         _id: req.params.id
+        //     }),
+        //     function(err, removed){
+        //         if(err){
+        //             console.log(err)
+        //         } else{
+        //             console.log(removed)
+        //             res.json(removed)
+        //         }
+        //     }
+        db.Connection.findById(req.params.id)
+        .then(dbModel => dbModel.remove())
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
     }    
 }
