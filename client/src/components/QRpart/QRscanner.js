@@ -59,7 +59,7 @@ class QRscanner extends Component {
           delay={this.state.delay}
           onError={this.handleError}
           onScan={this.handleScan}
-          style={{ width: "250px", height: "250px" }}
+          style={{ width: "300px", height: "300px" }}
           showViewFinder={true}
         />)
     } else {
