@@ -42,6 +42,14 @@ class Connections extends Component {
             .catch(err => console.log(err))
       })
   };
+  deleteConnect = id => {
+    console.log(id)
+    API.removeConnection(id)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  };
 
   render() {
     return (
@@ -50,20 +58,19 @@ class Connections extends Component {
           return (
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography className=""> {connection.fullName} </Typography>
-                {/* <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/> */}
+                <Typography className="">{connection.fullName} </Typography>
               </ExpansionPanelSummary>
 
               <ExpansionPanelDetails>
                 <Typography>
-                  <p>Phone Number: {connection.phoneNumber}</p>
-                  <p>Industry: {connection.industry}</p>
-                  <p>Company: {connection.company}</p>
-                  <p>City: {connection.city}</p>
-                  <p>State: {connection.state}</p>
-                  <p>Email: <a href={`mailto:${connection.email}`}>{connection.email}</a></p>
+                  <p><strong>Phone Number: </strong>{connection.phoneNumber}</p>
+                  <p><strong>Industry: </strong>{connection.industry}</p>
+                  <p><strong>Company: </strong>{connection.company}</p>
+                  <p><strong>City: </strong>{connection.city}</p>
+                  <p><strong>State: </strong>{connection.state}</p>
+                  <p><strong>Email: </strong><a href={`mailto:${connection.email}`}>{connection.email}</a></p>
 
-                  <DeleteBtn id={this.state.connections[index]._id}  />
+                  <DeleteBtn onClick={() =>this.deleteConnect(this.state.connections[index]._id)}  />
 
                 </Typography>
               </ExpansionPanelDetails>
