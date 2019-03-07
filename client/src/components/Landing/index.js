@@ -9,10 +9,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 const Landing = () => (
   <div align='center'>
-    <h1 style={{ textDecoration: 'none', color: '#64ffda' }} >
-      Connections </h1>
-
-    <h2 style={{ textDecoration: 'none', color: '#bdbdbd' }}> Contacts | QR </h2>
+    <h1 style={{ textDecoration: 'none', color: '#64ffda' }}> Contacts | QR </h1>
 
     <p style={{ textDecoration: 'none', color: '#bdbdbd' }}>
       Your professional connections, by QR code.
