@@ -1,9 +1,6 @@
 import React from "react";
 
 // Material UI
-// import PropTypes from 'prop-types';
-// import { withStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -54,7 +51,7 @@ const Landing = () => (
     <br />
 
 
-    <img alt="scanMe" src={require('../../images/scanmeQR.png')} />
+    <img alt="scanMe" src={require('../../images/usingConnections1.jpg')} />
 
     <br />
     <br /><br /><br /><br /><br />
