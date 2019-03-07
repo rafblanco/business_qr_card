@@ -48,7 +48,7 @@ const Landing = () => (
     <br />
 
 
-    <img alt="scanMe" src={require('../../images/usingConnections1.jpg')} />
+    <img alt="scanMe" style={{borderRadius: 3}} src={require('../../images/usingConnections1.jpg')} />
 
     <br />
     <br /><br /><br /><br /><br />
