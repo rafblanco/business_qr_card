@@ -5,8 +5,11 @@ import API from "../../utils/api"
 
 class DeleteBtn extends Component{
     deleteConnect = () =>{
+        console.log(this.props.id)
         API.removeConnection(this.props.id)
-            .then()
+            .then(res =>{
+                console.log(res)
+            })
             .catch(err => console.log(err))
     }
     render(){

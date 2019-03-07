@@ -44,6 +44,7 @@ class Connections extends Component {
   };
 
   render() {
+    this.infoAPI()
     return (
       <div>
         {this.state.info.map((connection, index) => {
@@ -61,8 +62,9 @@ class Connections extends Component {
                   <p>Company: {connection.company}</p>
                   <p>City: {connection.city}</p>
                   <p>State: {connection.state}</p>
-                  <p>Email: </p><a href={`mailto:${connection.email}`}>{connection.email}</a>
+                  <p>Email: <a href={`mailto:${connection.email}`}>{connection.email}</a></p>
                 </Typography>
+                <DeleteBtn id={this.state.connections[index]._id} style={{flex: -1}}/>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           );
