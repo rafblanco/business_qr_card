@@ -61,7 +61,6 @@ class HomePage extends Component{
     company= {this.state.company}     
     connections = {this.state.connections}  
     id = {this.state.id}
-    loadProfile={this.loadProfile()}
       />
 
     </div>
