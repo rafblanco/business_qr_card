@@ -13,6 +13,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ImageAvatars from '../Avatar/index';
+import UpdateModal from '../UpdateModal/index'
 
 // QR bit
 import QRcode from '../QRpart/QRcode'
@@ -76,7 +77,16 @@ class MyInfoCard extends React.Component {
           title={this.props.user}
           subheader=""
         />
+
         <CardContent>
+          <UpdateModal 
+          email ={this.props.email}
+          fullName={this.props.fullName}
+          city ={this.props.city}
+          state={this.props.state}
+          company={this.props.company}
+          industry={this.props.industry}
+          />
           <Typography component="p" variant="inherit" gutterBottom>
 
             <strong>Email: </strong>{this.props.email}
