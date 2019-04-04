@@ -9,15 +9,18 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import API from "../../utils/api";
 
 export default class UpdateModal extends React.Component {
-  state = {
+  constructor(props){
+    super(props);
+
+    this.state = {
     open: false,
-    phoneNumber: "",
+    phoneNumber: this.props.phoneNumber,
     industry: this.props.industry,
     city: this.props.city,
     state: this.props.state,
     company: this.props.company,
-  };
-
+  }
+}
   onSubmit = event =>{
     event.preventDefault();
 
@@ -101,7 +104,6 @@ export default class UpdateModal extends React.Component {
               margin="dense"
               label="Phone Number"
               name="phoneNumber"
-              defaultValue= {this.props.phoneNumber}
               value={this.state.phoneNumber}
               onChange={this.handleChange('phoneNumber')}
               type="number"
