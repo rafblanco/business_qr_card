@@ -72,6 +72,7 @@ class NavTabs extends React.Component {
           city= {this.props.city} 
           state= {this.props.state}
           company= {this.props.company}
+          loadProfile = {this.props.loadProfile}
           />
           </TabContainer>}
 
