@@ -11,45 +11,48 @@ import API from "../../utils/api";
 export default class UpdateModal extends React.Component {
   state = {
     open: false,
-    // fullName: "",
-    phoneNumber: "",
-    industry: "",
-    city: "",
-    state: "",
-    company: "",
+    fullName: this.props.user,
+    phoneNumber: this.props.phoneNumber,
+    industry: this.props.industry,
+    city: this.props.city,
+    state: this.props.state,
+    company: this.props.company,
   };
 
-  updateProfile = () =>{
-      const id= this.props.id
-      const {
-          // fullName,
-          phoneNumber,
-          industry,
-          city,
-          state,
-          company
-      } = this.state;
+  onSubmit = event =>{
+    event.preventDefault();
 
-      API.updateUser(id, {
-        // fullName: fullName,
-        phoneNumber: phoneNumber,
-        city: city,
-        state: state,
-        industry: industry,
-        company: company
+    const id= this.props.id
+    const {
+        fullName,
+        phoneNumber,
+        industry,
+        city,
+        state,
+        company
+    } = this.state;
+
+    API.updateUser(id, {
+      fullName: fullName,
+      phoneNumber: phoneNumber,
+      city: city,
+      state: state,
+      industry: industry,
+      company: company
+    })
+      .then(res =>{
+          console.log(res)
+          this.handleClose()
       })
-        .then(res =>{
-            console.log(res)
-            this.handleClose()
-        })
-        .then(() =>{
-          this.props.loadProfile()
-        })
-        .catch(err=> {
-            console.log(err)
-        })
+      .then(() =>{
+        this.props.loadProfile()
+      })
+      .catch(err=> {
+          console.log(err)
+      })
   }
   handleChange = name => event =>{
+    console.log({ [name]: event.target.value });
       this.setState({[name]: event.target.value})
   }
 
@@ -80,7 +83,7 @@ export default class UpdateModal extends React.Component {
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              id="email"
               label="Email Address"
               disabled
               value={this.props.email}
@@ -98,45 +101,45 @@ export default class UpdateModal extends React.Component {
             <TextField
               autoFocus
               margin="dense"
-              id="name"
               label="Phone Number"
-              value={this.props.phoneNumber}
+              name="phoneNumber"
+              value={this.state.phoneNumber}
               onChange={this.handleChange('phoneNumber')}
               type="number"
             />  
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              name="city"
               label="City"
-              value={this.props.city}
+              value={this.state.city}
               onChange={this.handleChange('city')}
               type="string"
             />  
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              name="state"
               label="State"
-              value={this.props.state}
+              value={this.state.state}
               onChange={this.handleChange('state')}
               type="string"
             /> 
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              name="company"
               label="Company"
-              value={this.props.company}
+              value={this.state.company}
               onChange={this.handleChange('company')}
               type="string"
             />  
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              name="industry"
               label="Industry"
-              value={this.props.industry}
+              value={this.state.industry}
               onChange={this.handleChange('industry')}
               type="string"
             />                 
@@ -147,7 +150,7 @@ export default class UpdateModal extends React.Component {
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.updateProfile} color="primary">
+            <Button type="submit" color="primary">
               Update
             </Button>
           </DialogActions>
