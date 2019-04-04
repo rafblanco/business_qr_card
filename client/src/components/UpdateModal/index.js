@@ -84,13 +84,13 @@ export default class UpdateModal extends React.Component {
               type="email"
             />
             <TextField
-                autoFocus
-                margin="dense"
-                id="name"
-                label="Full Name"
-                value={this.props.fullName}
-                disabled
-                type="text"
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Full Name"
+              value={this.props.fullName}
+              disabled
+              type="text"
             />
             <TextField
               autoFocus

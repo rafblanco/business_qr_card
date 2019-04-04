@@ -30,7 +30,10 @@ class QRscanner extends Component {
     const newConnection = this.state.result;
     API.addConnection(id, newConnection)
       .then(res => {
-          this.setState({result : "No result"})
+        this.setState({result : "No result"})
+      })
+      .then( () =>{
+        this.props.loadProfile()
       })
       .catch(err => console.log(err))
   }
