@@ -11,7 +11,7 @@ import API from "../../utils/api";
 export default class UpdateModal extends React.Component {
   state = {
     open: false,
-    fullName: "",
+    // fullName: "",
     phoneNumber: "",
     industry: "",
     city: "",
@@ -22,7 +22,7 @@ export default class UpdateModal extends React.Component {
   updateProfile = () =>{
       const id= this.props.id
       const {
-          fullName,
+          // fullName,
           phoneNumber,
           industry,
           city,
@@ -31,7 +31,7 @@ export default class UpdateModal extends React.Component {
       } = this.state;
 
       API.updateUser(id, {
-        fullName: fullName,
+        // fullName: fullName,
         phoneNumber: phoneNumber,
         city: city,
         state: state,
@@ -41,6 +41,9 @@ export default class UpdateModal extends React.Component {
         .then(res =>{
             console.log(res)
             this.handleClose()
+        })
+        .then(() =>{
+          this.props.loadProfile()
         })
         .catch(err=> {
             console.log(err)
@@ -88,7 +91,7 @@ export default class UpdateModal extends React.Component {
               margin="dense"
               id="name"
               label="Full Name"
-              value={this.props.fullName}
+              value={this.props.user}
               disabled
               type="text"
             />
@@ -98,6 +101,7 @@ export default class UpdateModal extends React.Component {
               id="name"
               label="Phone Number"
               value={this.props.phoneNumber}
+              onChange={this.handleChange('phoneNumber')}
               type="number"
             />  
             <TextField
@@ -106,6 +110,7 @@ export default class UpdateModal extends React.Component {
               id="name"
               label="City"
               value={this.props.city}
+              onChange={this.handleChange('city')}
               type="string"
             />  
             <TextField
@@ -114,6 +119,7 @@ export default class UpdateModal extends React.Component {
               id="name"
               label="State"
               value={this.props.state}
+              onChange={this.handleChange('state')}
               type="string"
             /> 
             <TextField
@@ -122,6 +128,7 @@ export default class UpdateModal extends React.Component {
               id="name"
               label="Company"
               value={this.props.company}
+              onChange={this.handleChange('company')}
               type="string"
             />  
             <TextField
@@ -130,6 +137,7 @@ export default class UpdateModal extends React.Component {
               id="name"
               label="Industry"
               value={this.props.industry}
+              onChange={this.handleChange('industry')}
               type="string"
             />                 
             </form>

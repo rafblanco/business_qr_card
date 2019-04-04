@@ -81,11 +81,13 @@ class MyInfoCard extends React.Component {
         <CardContent>
           <UpdateModal 
           email ={this.props.email}
-          fullName={this.props.fullName}
+          fullName={this.props.user}
           city ={this.props.city}
           state={this.props.state}
           company={this.props.company}
           industry={this.props.industry}
+          phoneNumber= {this.props.phoneNumber}
+          loadProfile = {this.props.loadProfile}
           />
           <Typography component="p" variant="inherit" gutterBottom>
 
