@@ -45,6 +45,7 @@ class Connections extends Component {
     API.removeConnection(id)
       .then(res => {
         console.log(res)
+        this.props.loadProfile()
       })
       .catch(err => console.log(err))
   };
