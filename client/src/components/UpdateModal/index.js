@@ -11,8 +11,7 @@ import API from "../../utils/api";
 export default class UpdateModal extends React.Component {
   state = {
     open: false,
-    fullName: this.props.user,
-    phoneNumber: this.props.phoneNumber,
+    phoneNumber: "",
     industry: this.props.industry,
     city: this.props.city,
     state: this.props.state,
@@ -24,16 +23,15 @@ export default class UpdateModal extends React.Component {
 
     const id= this.props.id
     const {
-        fullName,
         phoneNumber,
         industry,
         city,
         state,
         company
-    } = this.state;
+    } = this.state; 
 
     API.updateUser(id, {
-      fullName: fullName,
+      fullName: this.props.fullName,
       phoneNumber: phoneNumber,
       city: city,
       state: state,
@@ -94,7 +92,7 @@ export default class UpdateModal extends React.Component {
               margin="dense"
               id="name"
               label="Full Name"
-              value={this.props.user}
+              value={this.props.fullName}
               disabled
               type="text"
             />
@@ -103,6 +101,7 @@ export default class UpdateModal extends React.Component {
               margin="dense"
               label="Phone Number"
               name="phoneNumber"
+              defaultValue= {this.props.phoneNumber}
               value={this.state.phoneNumber}
               onChange={this.handleChange('phoneNumber')}
               type="number"
