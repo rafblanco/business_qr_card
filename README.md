@@ -19,5 +19,5 @@ Deployed Link: https://fierce-beach-94431.herokuapp.com/
 
 
 <p align="left">
-  <a href="https://fierce-beach-94431.herokuapp.com/"> <img src="https://i.ibb.co/XD0Sv0Y/Screen-Shot-2019-06-28-at-7-53-10-PM.jpg" alt="Screen-Shot-2019-06-28-at-7-53-10-PM" width="550" title="homepage"></a>
+  <a href="https://fierce-beach-94431.herokuapp.com/"> <img src="https://i.ibb.co/Jq65M63/Screen-Shot-2019-06-28-at-7-53-10-PM.jpg" alt="Screen-Shot-2019-06-28-at-7-53-10-PM" width="550" title="homepage"></a>
 </p>
